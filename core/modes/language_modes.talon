@@ -1,0 +1,1 @@
+^clear forced$: user.code_clear_language_mode()
