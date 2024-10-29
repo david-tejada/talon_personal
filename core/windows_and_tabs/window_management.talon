@@ -1,0 +1,1 @@
+^{user.application_quick}: user.switcher_launch("{application_quick}")

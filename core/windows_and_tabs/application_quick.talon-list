@@ -1,0 +1,7 @@
+list: user.application_quick
+-
+webby: /Applications/Brave Browser.app
+foxy: /Applications/Firefox.app
+chromy: /Applications/Google Chrome.app
+cody: /Applications/Visual Studio Code.app
+terminal: /Applications/Warp.app
