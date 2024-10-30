@@ -5,9 +5,9 @@ code.language: typescriptreact
 -
 
 make const: "const "
-const <user.text>: user.insert_snippet("const {user.camel(text)} = $0;")
+const <user.text>: user.insert_snippet("const {user.camel(text)} = ")
 make let: "let "
-let <user.text>: user.insert_snippet("let {user.camel(text)} = $0;")
+let <user.text>: user.insert_snippet("let {user.camel(text)} = ")
 
 is instance of: " instanceof "
 type of <user.text> is <user.text>: "typeof {user.camel(text_1)} === \"{text_2}\""
@@ -29,11 +29,14 @@ throw new error: user.insert_snippet("throw new Error(\"$0\")")
 
 blocker:
   edit.line_end()
-  " "
-  user.code_block()
+  user.insert_snippet(" {{$0}}")
+  key(enter)
+
+make async: "async "
 
 make await: "await "
-make async: "async "
+await <user.text>: user.insert_snippet("await {user.camel(text)}($0)")
+
 make export: "export "
 
 make block lambda: user.insert_snippet("() => {{$0}}")
