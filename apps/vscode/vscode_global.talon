@@ -1,6 +1,3 @@
-# ^code {user.vscode_workspace}: user.system_command("/opt/homebrew/bin/code {vscode_workspace}")
-# ^code {user.vscode_workspace}: user.system_command("/usr/local/bin/cursor {vscode_workspace}")
-
 ^code {user.vscode_workspace}: user.switch_to_workspace_by_title_text(vscode_workspace)
 ^code <user.text>: user.switch_to_workspace_by_title_text(text)
 ^code open <user.text>:
