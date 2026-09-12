@@ -2,29 +2,25 @@ app: vscode
 -
 # Search/open files
 lisa [<user.text>] [{user.file_extension}]:
+  name = text or ''
+  extension = file_extension or ''
   user.vscode("workbench.action.quickOpen")
-  sleep(400ms)
-  insert(text or "")
-  insert(file_extension or "")
-  sleep(300ms)
-poppy <user.text> [{user.file_extension}]:
+  user.paste("{name}{extension}")
+poppy [<user.text>] [{user.file_extension}]:
+  name = text or ''
+  extension = file_extension or ''
   user.vscode("workbench.action.quickOpen")
-  sleep(400ms)
-  insert(text or "")
-  insert(file_extension or "")
-  sleep(400ms)
+  sleep(100ms)
+  user.paste("{name}{extension}")
+  sleep(100ms)
   key(enter)
-  sleep(150ms)
 poppy: user.vscode("workbench.action.openPreviousRecentlyUsedEditorInGroup")
 
 # Search/open workspaces
 pop work <user.text>:
   user.vscode("workbench.action.openRecent")
-  sleep(400ms)
   insert(text)
-  sleep(300ms)
   key(enter)
-  sleep(150ms)
 list work [<user.text>]:
   user.vscode("workbench.action.openRecent")
   sleep(400ms)
