@@ -1,0 +1,11 @@
+list: user.code_operators_bitwise
+tag: user.code_operators_bitwise
+-
+
+bit and: BITWISE_AND
+bit or: BITWISE_OR
+bit not: BITWISE_NOT
+
+bit ex or: BITWISE_EXCLUSIVE_OR
+bit left shift: BITWISE_LEFT_SHIFT
+bit right shift: BITWISE_RIGHT_SHIFT
