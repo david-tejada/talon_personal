@@ -11,4 +11,4 @@ class Actions:
 
     def pascal(text: str) -> str:
         """Formats text as PascalCase"""
-        return actions.user.formatted_text(text, "PRIVATE_CAMEL_CASE")
+        return actions.user.formatted_text(text, "PUBLIC_CAMEL_CASE")
