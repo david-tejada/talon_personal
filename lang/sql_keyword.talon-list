@@ -1,0 +1,16 @@
+list: user.sql_keyword
+-
+as
+create table
+from
+insert into
+join
+left join
+on
+right join
+select
+set
+update
+use
+where
+
