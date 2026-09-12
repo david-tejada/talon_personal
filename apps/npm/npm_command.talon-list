@@ -1,0 +1,9 @@
+list: user.npm_command
+-
+init
+install
+build: "run build\n"
+test: "test\n"
+watch: "run watch\n"
+linter: "run lint\n"
+dev: "run dev\n"
