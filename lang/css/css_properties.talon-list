@@ -1,0 +1,323 @@
+list: user.css_properties
+code.language: css
+code.language: scss
+-
+accent color: accent-color
+additive symbols: additive-symbols
+align content: align-content
+align items: align-items
+align self: align-self
+all: all
+animation delay: animation-delay
+animation direction: animation-direction
+animation duration: animation-duration
+animation fill mode: animation-fill-mode
+animation iteration count: animation-iteration-count
+animation name: animation-name
+animation play state: animation-play-state
+animation timing function: animation-timing-function
+animation: animation
+appearance: appearance
+aspect ratio: aspect-ratio
+backdrop filter: backdrop-filter
+backface visibility: backface-visibility
+background attachment: background-attachment
+background blend mode: background-blend-mode
+background clip: background-clip
+background color: background-color
+background image: background-image
+background origin: background-origin
+background position: background-position
+background repeat: background-repeat
+background size: background-size
+background: background
+block size: block-size
+border block end color: border-block-end-color
+border block end style: border-block-end-style
+border block end width: border-block-end-width
+border block end: border-block-end
+border block start color: border-block-start-color
+border block start style: border-block-start-style
+border block start width: border-block-start-width
+border block start: border-block-start
+border bottom color: border-bottom-color
+border bottom left radius: border-bottom-left-radius
+border bottom right radius: border-bottom-right-radius
+border bottom style: border-bottom-style
+border bottom width: border-bottom-width
+border bottom: border-bottom
+border collapse: border-collapse
+border color: border-color
+border image outset: border-image-outset
+border image repeat: border-image-repeat
+border image slice: border-image-slice
+border image source: border-image-source
+border image width: border-image-width
+border image: border-image
+border inline end color: border-inline-end-color
+border inline end style: border-inline-end-style
+border inline end width: border-inline-end-width
+border inline end: border-inline-end
+border inline start color: border-inline-start-color
+border inline start style: border-inline-start-style
+border inline start width: border-inline-start-width
+border inline start: border-inline-start
+border left color: border-left-color
+border left style: border-left-style
+border left width: border-left-width
+border left: border-left
+border radius: border-radius
+border right color: border-right-color
+border right style: border-right-style
+border right width: border-right-width
+border right: border-right
+border spacing: border-spacing
+border style: border-style
+border top color: border-top-color
+border top left radius: border-top-left-radius
+border top right radius: border-top-right-radius
+border top style: border-top-style
+border top width: border-top-width
+border top: border-top
+border width: border-width
+border: border
+bottom: bottom
+box decoration break: box-decoration-break
+box shadow: box-shadow
+box sizing: box-sizing
+break after: break-after
+break before: break-before
+break inside: break-inside
+caller: color
+caption side: caption-side
+clear: clear
+clip path: clip-path
+clip: clip
+collar: color
+color: color
+column count: column-count
+column fill: column-fill
+column gap: column-gap
+column rule color: column-rule-color
+column rule style: column-rule-style
+column rule width: column-rule-width
+column rule: column-rule
+column span: column-span
+column width: column-width
+columns: columns
+container name: container-name
+container type: container-type
+container: container
+content: content
+counter increment: counter-increment
+counter reset: counter-reset
+cursor: cursor
+direction: direction
+display: display
+empty cells: empty-cells
+fallback: fallback
+filter: filter
+flex basis: flex-basis
+flex direction: flex-direction
+flex flow: flex-flow
+flex grow: flex-grow
+flex order: order
+flex shrink: flex-shrink
+flex wrap: flex-wrap
+flex: flex
+float: float
+font family: font-family
+font feature settings: font-feature-settings
+font kerning: font-kerning
+font language override: font-language-override
+font size adjust: font-size-adjust
+font size: font-size
+font stretch: font-stretch
+font style: font-style
+font synthesis: font-synthesis
+font variant alternates: font-variant-alternates
+font variant caps: font-variant-caps
+font variant east asian: font-variant-east-asian
+font variant ligatures: font-variant-ligatures
+font variant numeric: font-variant-numeric
+font variant position: font-variant-position
+font variant: font-variant
+font weight: font-weight
+font: font
+gap: gap
+grid area: grid-area
+grid auto columns: grid-auto-columns
+grid auto flow: grid-auto-flow
+grid auto position: grid-auto-position
+grid auto rows: grid-auto-rows
+grid column end: grid-column-end
+grid column start: grid-column-start
+grid column: grid-column
+grid row end: grid-row-end
+grid row start: grid-row-start
+grid row: grid-row
+grid template areas: grid-template-areas
+grid template columns: grid-template-columns
+grid template rows: grid-template-rows
+grid template: grid-template
+grid: grid
+height: height
+hyphens: hyphens
+image orientation: image-orientation
+image rendering: image-rendering
+image resolution: image-resolution
+ime mode: ime-mode
+inline size: inline-size
+inset: inset
+isolation: isolation
+justify content: justify-content
+justify self: justify-self
+left: left
+letter spacing: letter-spacing
+line break: line-break
+line height: line-height
+list style image: list-style-image
+list style position: list-style-position
+list style type: list-style-type
+list style: list-style
+margin block end: margin-block-end
+margin block start: margin-block-start
+margin block: margin-block
+margin bottom: margin-bottom
+margin inline end: margin-inline-end
+margin inline start: margin-inline-start
+margin inline: margin-inline
+margin left: margin-left
+margin right: margin-right
+margin top: margin-top
+margin: margin
+marks: marks
+mask image: mask-image
+mask type: mask-type
+mask: mask
+max block size: max-block-size
+max height: max-height
+max inline size: max-inline-size
+max width: max-width
+max zoom: max-zoom
+min block size: min-block-size
+min height: min-height
+min height: min-height
+min inline size: min-inline-size
+min width: min-width
+min width: min-width
+min zoom: min-zoom
+mix blend mode: mix-blend-mode
+negative: negative
+object fit: object-fit
+object position: object-position
+offset block end: offset-block-end
+offset block start: offset-block-start
+offset inline end: offset-inline-end
+offset inline start: offset-inline-start
+opacity: opacity
+order: order
+orientation: orientation
+orphans: orphans
+outline color: outline-color
+outline offset: outline-offset
+outline style: outline-style
+outline width: outline-width
+outline: outline
+overflow wrap: overflow-wrap
+overflow x: overflow-x
+overflow y: overflow-y
+overflow: overflow
+pad: pad
+padding block end: padding-block-end
+padding block start: padding-block-start
+padding block: padding-block
+padding bottom: padding-bottom
+padding inline end: padding-inline-end
+padding inline start: padding-inline-start
+padding inline: padding-inline
+padding left: padding-left
+padding right: padding-right
+padding top: padding-top
+padding: padding
+page break after: page-break-after
+page break before: page-break-before
+page break inside: page-break-inside
+perspective origin: perspective-origin
+perspective: perspective
+place content: place-content
+place items: place-items
+pointer events: pointer-events
+position: position
+pouting: padding
+prefix: prefix
+quotes: quotes
+range: range
+resize: resize
+right: right
+row gap: row-gap
+ruby align: ruby-align
+ruby merge: ruby-merge
+ruby position: ruby-position
+scholar: color
+scroll behavior: scroll-behavior
+scroll snap coordinate: scroll-snap-coordinate
+scroll snap destination: scroll-snap-destination
+scroll snap points x: scroll-snap-points-x
+scroll snap points y: scroll-snap-points-y
+scroll snap type x: scroll-snap-type-x
+scroll snap type y: scroll-snap-type-y
+scroll snap type: scroll-snap-type
+shape image threshold: shape-image-threshold
+shape margin: shape-margin
+shape outside: shape-outside
+soars: src
+source: src
+speak as: speak-as
+src: src
+suffix: suffix
+symbols: symbols
+system: system
+tab size: tab-size
+table layout: table-layout
+text align last: text-align-last
+text align: text-align
+text combine upright: text-combine-upright
+text decoration color: text-decoration-color
+text decoration line: text-decoration-line
+text decoration style: text-decoration-style
+text decoration: text-decoration
+text indent: text-indent
+text orientation: text-orientation
+text overflow: text-overflow
+text rendering: text-rendering
+text shadow: text-shadow
+text transform: text-transform
+text underline position: text-underline-position
+top: top
+touch action: touch-action
+transform box: transform-box
+transform origin: transform-origin
+transform style: transform-style
+transform: transform
+transition delay: transition-delay
+transition duration: transition-duration
+transition property: transition-property
+transition timing function: transition-timing-function
+transition: transition
+turn: turn
+unicode bidi: unicode-bidi
+unicode range: unicode-range
+user zoom: user-zoom
+vertical align: vertical-align
+visibility: visibility
+white space: white-space
+widows: widows
+width: width
+will change: will-change
+word break: word-break
+word spacing: word-spacing
+word wrap: word-wrap
+writing mode: writing-mode
+z index: z-index
+zoom: zoom

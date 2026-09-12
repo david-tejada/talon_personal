@@ -1,0 +1,152 @@
+list: user.css_color_keywords
+code.language: css
+code.language: scss
+-
+alice blue: aliceblue
+antique white: antiquewhite
+aqua
+aquamarine
+azure
+beige
+bisque
+black
+blanched almond: blanchedalmond
+blue
+blue violet: blueviolet
+brown
+burly wood: burlywood
+cadet blue: cadetblue
+chartreuse
+chocolate
+coral
+cornflower blue: cornflowerblue
+cornsilk
+crimson
+cyan
+dark blue: darkblue
+dark cyan: darkcyan
+dark goldenrod: darkgoldenrod
+dark gray: darkgray
+dark green: darkgreen
+dark grey: darkgrey
+dark khaki: darkkhaki
+dark magenta: darkmagenta
+dark olive green: darkolivegreen
+dark orange: darkorange
+dark orchid: darkorchid
+dark red: darkred
+dark salmon: darksalmon
+dark sea green: darkseagreen
+dark slate blue: darkslateblue
+dark slate gray: darkslategray
+dark slate grey: darkslategrey
+dark turquoise: darkturquoise
+dark violet: darkviolet
+deep pink: deeppink
+deep sky blue: deepskyblue
+dim gray: dimgray
+dim grey: dimgrey
+dodger blue: dodgerblue
+firebrick
+floral white: floralwhite
+forest green: forestgreen
+fuchsia
+gainsboro
+ghost white: ghostwhite
+gold
+goldenrod
+gray
+green
+green yellow: greenyellow
+grey
+honeydew
+hot pink: hotpink
+indian red: indianred
+indigo
+ivory
+khaki
+lavender
+lavender blush: lavenderblush
+lawn green: lawngreen
+lemon chiffon: lemonchiffon
+light blue: lightblue
+light coral: lightcoral
+light cyan: lightcyan
+light goldenrod yellow: lightgoldenrodyellow
+light gray: lightgray
+light green: lightgreen
+light grey: lightgrey
+light pink: lightpink
+light salmon: lightsalmon
+light sea green: lightseagreen
+light sky blue: lightskyblue
+light slate gray: lightslategray
+light slate grey: lightslategrey
+light steel blue: lightsteelblue
+light yellow: lightyellow
+lime
+lime green: limegreen
+linen
+magenta
+maroon
+medium aquamarine: mediumaquamarine
+medium blue: mediumblue
+medium orchid: mediumorchid
+medium purple: mediumpurple
+medium sea green: mediumseagreen
+medium slate blue: mediumslateblue
+medium spring green: mediumspringgreen
+medium turquoise: mediumturquoise
+medium violet red: mediumvioletred
+midnight blue: midnightblue
+mint cream: mintcream
+misty rose: mistyrose
+moccasin
+navajo white: navajowhite
+navy
+old lace: oldlace
+olive
+olive drab: olivedrab
+orange
+orange red: orangered
+orchid
+pale goldenrod: palegoldenrod
+pale green: palegreen
+pale turquoise: paleturquoise
+pale violet red: palevioletred
+papaya whip: papayawhip
+peach puff: peachpuff
+peru
+pink
+plum
+powder blue: powderblue
+purple
+rebecca purple: rebeccapurple
+red
+rosy brown: rosybrown
+royal blue: royalblue
+saddle brown: saddlebrown
+salmon
+sandy brown: sandybrown
+sea green: seagreen
+seashell
+sienna
+silver
+sky blue: skyblue
+slate blue: slateblue
+slate gray: slategray
+slate grey: slategrey
+snow
+spring green: springgreen
+steel blue: steelblue
+tan
+teal
+thistle
+tomato
+turquoise
+violet
+wheat
+white
+white smoke: whitesmoke
+yellow
+yellow green: yellowgreen

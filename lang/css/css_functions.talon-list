@@ -1,0 +1,68 @@
+list: user.css_functions
+code.language: css
+code.language: scss
+-
+R G B: rgb
+R G B A: rgba
+H S L: hsl
+H S L A: hsla
+H W B: hwb
+L A B: lab
+L C H: lch
+color
+linear gradient: linear-gradient
+radial gradient: radial-gradient
+repeating linear gradient: repeating-linear-gradient
+repeating radial gradient: repeating-radial-gradient
+conic gradient: conic-gradient
+calc
+min
+max
+clamp
+var
+env
+attr
+U R L: url
+format
+image
+image set: image-set
+counter
+counters
+toggle
+translate
+translate 3D: translate3d
+translate X: translateX
+translate Y: translateY
+translate Z: translateZ
+scale
+scale 3D: scale3d
+scale X: scaleX
+scale Y: scaleY
+scale Z: scaleZ
+rotate
+rotate 3D: rotate3d
+rotate X: rotateX
+rotate Y: rotateY
+rotate Z: rotateZ
+skew
+skew X: skewX
+skew Y: skewY
+matrix
+matrix 3D: matrix3d
+perspective
+blur
+brightness
+contrast
+drop shadow: drop-shadow
+grayscale
+hue rotate: hue-rotate
+invert
+opacity
+saturate
+sepia
+path
+repeat
+fit content: fit-content
+contain
+cover
+minmax: minmax
