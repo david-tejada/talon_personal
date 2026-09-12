@@ -15,13 +15,5 @@ class Actions:
             actions.user.switcher_focus_window_by_app_and_title(
                 "Code", f"{title_text} —"
             )
-        except Exception as e:
+        except Exception:
             pass
-            # actions.user.switcher_focus("Cursor")
-            # actions.app.window_open()
-            # actions.sleep("1500ms")
-            # actions.user.vscode("workbench.action.openRecent")
-            # actions.sleep("300ms")
-            # actions.insert(title_text)
-            # actions.sleep("100ms")
-            # actions.key("enter")
