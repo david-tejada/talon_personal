@@ -3,8 +3,8 @@ redo it: edit.redo()
 nope: edit.undo()
 
 # Saving
-disk: edit.save()
-disk all: edit.save_all()
+save it: edit.save()
+save all: edit.save_all()
 
 # Navigation
 west: edit.left()
@@ -23,16 +23,14 @@ squash:
     edit.word_right()
 
 # Text removal
-cleft | cliff:
-  edit.extend_word_left()
-  edit.delete()
-(cleft | cliff) all:
-  edit.extend_line_start()
-  edit.delete()
-crimp:
-    edit.extend_word_right()
-    edit.delete()
-crimp all:
-    edit.extend_line_end()
-    edit.delete()
+cleft: key(alt-backspace)
+cleft all: key(cmd-backspace)
+crimp: key(alt-delete)
+crimp all: key(cmd-delete)
 drill: user.delete_right()
+
+# Copy/paste
+paste it: edit.paste()
+
+# Search
+find it <user.text>: edit.find(text)
