@@ -4,4 +4,5 @@ webby: /Applications/Brave Browser.app
 firefox: /Applications/Firefox.app
 chromy: /Applications/Google Chrome.app
 cody: /Applications/Visual Studio Code.app
+agent: /Applications/Claude.app
 terminal: /Applications/Warp.app
