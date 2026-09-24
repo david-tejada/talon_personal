@@ -35,6 +35,18 @@ mod.setting(
     desc="Key that discards the current recording, as configured in Vowen",
 )
 mod.setting(
+    "vowen_stop_pops",
+    type=int,
+    default=2,
+    desc="Pops needed to stop a dictation. Set to 1 for a single pop",
+)
+mod.setting(
+    "vowen_double_pop_speed_maximum",
+    type=float,
+    default=0.4,
+    desc="Longest gap in seconds accepted between two stop pops",
+)
+mod.setting(
     "vowen_suspend_timeout_ms",
     type=int,
     default=3000,
@@ -45,6 +57,7 @@ _dictating = False
 _suspend_seen = False
 _started_monotonic = 0.0
 _watch_job = None
+_time_last_pop = 0.0
 
 
 def _set_dictating(active: bool):
@@ -103,7 +116,7 @@ def _watch():
 class Actions:
     def vowen_dictation_start():
         """Toggle Vowen recording on and arm the pop that stops it."""
-        global _suspend_seen, _started_monotonic, _watch_job
+        global _suspend_seen, _started_monotonic, _watch_job, _time_last_pop
 
         if _dictating:
             return
@@ -112,6 +125,7 @@ class Actions:
 
         _suspend_seen = False
         _started_monotonic = time.monotonic()
+        _time_last_pop = 0.0
         _set_dictating(True)
 
         _stop_watching()
@@ -139,4 +153,18 @@ class Actions:
 @ctx_dictating.action_class("user")
 class DictatingActions:
     def noise_trigger_pop():
-        actions.user.vowen_dictation_stop()
+        global _time_last_pop
+
+        if settings.get("user.vowen_stop_pops") < 2:
+            actions.user.vowen_dictation_stop()
+            return
+
+        # Two pops close together. There is deliberately no minimum gap: an
+        # earlier version rejected pops for being too fast as well as too
+        # slow, which made it hard to trigger at all.
+        now = time.perf_counter()
+        delta = now - _time_last_pop
+        _time_last_pop = now
+
+        if delta <= settings.get("user.vowen_double_pop_speed_maximum"):
+            actions.user.vowen_dictation_stop()

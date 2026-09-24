@@ -10,4 +10,4 @@
 mode: sleep
 and tag: user.vowen_dictating
 -
-^(cancel dictation)+$: user.vowen_dictation_cancel()
+(cancel dictation)$: user.vowen_dictation_cancel()
