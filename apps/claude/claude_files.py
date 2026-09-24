@@ -158,4 +158,8 @@ class Actions:
         if found is None:
             app.notify(f"No file numbered {number} in this session")
             return
+        # VS Code opens a missing path as a new empty file, so check first.
+        if not os.path.exists(found[0]):
+            app.notify(f"File {number} doesn't exist: {found[0]}")
+            return
         open_in_vscode(*found)
