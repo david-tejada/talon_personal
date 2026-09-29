@@ -197,7 +197,7 @@ ctx.lists["user.css_values"] = {
     "pre": "pre",
     "pre line": "pre-line",
     "pre wrap": "pre-wrap",
-    "preserve 3d": "preserve-3d",
+    "preserve three d": "preserve-3d",
     "progress": "progress",
     "region": "region",
     "relative": "relative",
