@@ -50,6 +50,16 @@ def update_list():
     )
 
 
+def find_session_by_hint(hint: str) -> str | None:
+    """Return the id of the session whose title starts with "[hint] " """
+    for session in read_sessions():
+        match = HINT.match(session["title"])
+        if match and match.group(1) == hint.upper():
+            return session["sessionId"]
+    app.notify(f"No session with hint {hint.upper()}")
+    return None
+
+
 @mod.action_class
 class Actions:
     def claude_open_session(session_id: str):
@@ -58,12 +68,20 @@ class Actions:
 
     def claude_open_session_by_hint(hint: str):
         """Open the session whose title starts with "[hint] " """
-        for session in read_sessions():
-            match = HINT.match(session["title"])
-            if match and match.group(1) == hint.upper():
-                actions.user.claude_open_session(session["sessionId"])
-                return
-        app.notify(f"No session with hint {hint.upper()}")
+        session_id = find_session_by_hint(hint)
+        if session_id:
+            actions.user.claude_open_session(session_id)
+
+    def claude_archive_session_by_hint(hint: str):
+        """Open the session whose title starts with "[hint] " and archive it"""
+        session_id = find_session_by_hint(hint)
+        if not session_id:
+            return
+        actions.user.claude_open_session(session_id)
+        # Give the app time to switch to the session before archiving it.
+        actions.sleep("500ms")
+        # The app's own "Archive session" shortcut, which archives the open session.
+        actions.key("cmd-alt-a")
 
     def claude_open_previous_session():
         """Open the session that was focused before the current one"""

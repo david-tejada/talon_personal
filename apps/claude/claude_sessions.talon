@@ -13,4 +13,7 @@ poppy: user.claude_open_previous_session()
 poppy {user.claude_session}: user.claude_open_session(claude_session)
 
 # Open a session by the hint at the start of its title, "[A]" or "[AB]"
-slot <user.letters>: user.claude_open_session_by_hint(letters)
+(slot | tab) <user.letters>: user.claude_open_session_by_hint(letters)
+
+# Archive a session by its hint, which also removes it from the sidebar
+(slot | tab) close <user.letters>: user.claude_archive_session_by_hint(letters)
