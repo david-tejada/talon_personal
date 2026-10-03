@@ -11,3 +11,6 @@ poppy: user.claude_open_previous_session()
 
 # Open a session by its title
 poppy {user.claude_session}: user.claude_open_session(claude_session)
+
+# Open a session by the hint at the start of its title, "[A]" or "[AB]"
+slot <user.letters>: user.claude_open_session_by_hint(letters)

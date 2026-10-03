@@ -1,4 +1,5 @@
 import json
+import re
 import subprocess
 from pathlib import Path
 
@@ -8,6 +9,11 @@ from talon import Context, Module, actions, app, cron
 SESSIONS_DIR = (
     Path.home() / "Library/Application Support/Claude/claude-code-sessions"
 )
+
+# A session's hint is the "[A] " prefix on its title. Claude adds it in its
+# first reply, by a rule in ~/.claude/CLAUDE.md that runs
+# ~/.claude/scripts/session_hint.py to pick the first free hint.
+HINT = re.compile(r"\[([A-Z]{1,2})\] ")
 
 mod = Module()
 mod.list("claude_session", "Titles of Claude Code sessions in the desktop app")
@@ -32,7 +38,10 @@ def read_sessions() -> list[dict]:
 
 def update_list():
     global last_titles
-    titles = {s["title"]: s["sessionId"] for s in read_sessions()}
+    # Leave the hint out of the spoken form, so "poppy" takes the title alone.
+    titles = {
+        HINT.sub("", s["title"], count=1): s["sessionId"] for s in read_sessions()
+    }
     if titles == last_titles:
         return
     last_titles = titles
@@ -46,6 +55,15 @@ class Actions:
     def claude_open_session(session_id: str):
         """Open a Claude Code session in the desktop app by its id"""
         subprocess.run(["open", f"claude://code/continue?session={session_id}"])
+
+    def claude_open_session_by_hint(hint: str):
+        """Open the session whose title starts with "[hint] " """
+        for session in read_sessions():
+            match = HINT.match(session["title"])
+            if match and match.group(1) == hint.upper():
+                actions.user.claude_open_session(session["sessionId"])
+                return
+        app.notify(f"No session with hint {hint.upper()}")
 
     def claude_open_previous_session():
         """Open the session that was focused before the current one"""
