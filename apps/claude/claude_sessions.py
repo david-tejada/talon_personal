@@ -50,12 +50,12 @@ def update_list():
     )
 
 
-def find_session_by_hint(hint: str) -> str | None:
-    """Return the id of the session whose title starts with "[hint] " """
+def find_session_by_hint(hint: str) -> dict | None:
+    """Return the data of the session whose title starts with "[hint] " """
     for session in read_sessions():
         match = HINT.match(session["title"])
         if match and match.group(1) == hint.upper():
-            return session["sessionId"]
+            return session
     app.notify(f"No session with hint {hint.upper()}")
     return None
 
@@ -68,20 +68,33 @@ class Actions:
 
     def claude_open_session_by_hint(hint: str):
         """Open the session whose title starts with "[hint] " """
-        session_id = find_session_by_hint(hint)
-        if session_id:
-            actions.user.claude_open_session(session_id)
+        session = find_session_by_hint(hint)
+        if session:
+            actions.user.claude_open_session(session["sessionId"])
 
     def claude_archive_session_by_hint(hint: str):
         """Open the session whose title starts with "[hint] " and archive it"""
-        session_id = find_session_by_hint(hint)
-        if not session_id:
+        session = find_session_by_hint(hint)
+        if not session:
             return
-        actions.user.claude_open_session(session_id)
+        actions.user.claude_open_session(session["sessionId"])
         # Give the app time to switch to the session before archiving it.
         actions.sleep("500ms")
         # The app's own "Archive session" shortcut, which archives the open session.
         actions.key("cmd-alt-a")
+
+    def claude_new_session_by_hint(hint: str):
+        """Start a new session in the folder of the session whose title starts
+        with "[hint] " """
+        session = find_session_by_hint(hint)
+        if not session:
+            return
+        # Opening claude://code/new?folder=... would be simpler, but the app
+        # asks to trust the folder every time a link starts a session.
+        actions.user.claude_open_session(session["sessionId"])
+        actions.sleep("500ms")
+        # The app's "New session with current settings" shortcut
+        actions.key("cmd-shift-n")
 
     def claude_open_previous_session():
         """Open the session that was focused before the current one"""
