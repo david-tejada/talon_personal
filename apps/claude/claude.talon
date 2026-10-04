@@ -65,7 +65,3 @@ tiny down file: user.claude_scroll("file", "down", 0.2)
 # Put the cursor back in the prompt box, for when focus gets lost, for
 # example after cancelling dictation
 focus chat: user.claude_focus_prompt()
-
-# Records with the Claude app's own mic. Bare `dictate` still starts Vowen
-# here (plugin/vowen/vowen.talon), so either one is available.
-^claude dictate$: user.claude_dictate_start()

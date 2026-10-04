@@ -64,6 +64,12 @@ mod.setting(
 
 ctx = Context()
 
+# Active while the Claude app is focused, so `dictate` uses its own mic here.
+ctx_app = Context()
+ctx_app.matches = r"""
+app.bundle: com.anthropic.claudefordesktop
+"""
+
 # Only active during a Claude app recording, so the pop override cannot
 # affect pops used anywhere else.
 ctx_dictating = Context()
@@ -379,6 +385,12 @@ class Actions:
         actions.key("enter")
         actions.speech.enable()
         ctx.tags = []
+
+
+@ctx_app.action_class("user")
+class AppActions:
+    def dictation_start():
+        actions.user.claude_dictate_start()
 
 
 @ctx_dictating.action_class("user")
